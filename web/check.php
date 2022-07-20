@@ -179,7 +179,7 @@
           </tr>
           <tr>
             <th style="text-align:left" colspan="2"> 
-　　          <?php if($b<16): ?>          
+　　          <?php if($b<1): ?>          
     　　　          <p>　この内容でよろしければ『送信する』ボタンを押して下さい．<br>
     　変更が必要な場合は『戻る』ボタンで登録フォームに戻ります．</p>
          　　 <?php else : ?>
