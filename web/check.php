@@ -38,7 +38,9 @@
   $Tanto_Address = $_SESSION["Tanto_Address"];
   $zoom = $_SESSION["zoom"];
   $conn = $_SESSION["conncon"];
-  
+  $w_teiin = $_SESSION["w_teiin"]; 
+  $k_teiin = $_SESSION["k_teiin"];
+
   //トークンチェック・POSTからSESSIONへ受け渡し
   if($_SESSION["input_token"] === $_POST["input_token"]) {
     $_SESSION = $_POST;
@@ -179,7 +181,7 @@
           </tr>
           <tr>
             <th style="text-align:left" colspan="2"> 
-　　          <?php if($b<1): ?>          
+　　          <?php if($b<$k_teiin): ?>          
     　　　          <p>　この内容でよろしければ『送信する』ボタンを押して下さい．<br>
     　変更が必要な場合は『戻る』ボタンで登録フォームに戻ります．</p>
          　　 <?php else : ?>
@@ -205,7 +207,7 @@
               <input type="submit" formaction="./index.php" value="戻る" style="position: relative; left: 110px; top: 20px;"/>
 
               <?php if(!$tokenValidateError): ?>
-                <?php if($b<16): ?>
+                <?php if($b<$k_teiin): ?>
                   　<input type="submit" value="送信する" style="position: relative; left: 130px; top: 20px;"/>
                 <?php else : ?>
                     <input type="submit" disabled value="送信する" style="position: relative; left: 130px; top: 20px;"/>
