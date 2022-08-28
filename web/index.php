@@ -4,7 +4,7 @@
     //イベントによって変更する6箇所 + ZoomURL + DataBaseのURI5つ
     $title =  '明日から役立つセミナー「MRI」'; //あまり長くなると折り返すので注意！　52行目に代入
     $kaisaibi="2022-09-09T20:00:00";  //開催終了後（時間）に受付を停止　244行目に代入
-    $limit=   "2022-09-05T00:59:59";  //会場の締切日の指定 締切日の24時に締め切る　235行目に代入
+    $limit=   "2022-08-28T00:59:59";  //会場の締切日の指定 締切日の24時に締め切る　235行目に代入
     $k_teiin ="12";                   //会場の定員　95行目に代入
     $w_teiin ="80";                   //Webの定員　91行目に代入
     $Tanto_Address = "sahara@daihougi.ne.jp"; //開催担当責任者のメルアド　または　ML
@@ -89,8 +89,8 @@
                                 <span class="contact-skill-txt">Web参加　会員優先 先着<?php echo $w_teiin?>名（当日まで受付）</span>
                             </label>
                             <label class="contact-skill">
-                                <input type="radio" id="kaijyo" name="keitai" value="会場参加" <?php if( !empty($_POST['keitai']) && $_POST['keitai'] === "会場参加" ){ echo 'checked'; } ?>/>
-                                <span class="contact-skill-txt" id="edit_area">会場参加　会員限定 先着<?php echo $k_teiin?>名（締切<?php echo $limit2?>）</span>
+                                <input type="radio" id="kaijyo" name="keitai" value="会場参加" disabled="disabled"<?php if( !empty($_POST['keitai']) && $_POST['keitai'] === "会場参加" ){ echo 'checked'; } ?>/>
+                                <span class="contact-skill-txt" id="edit_area">会場参加　会員限定 先着<?php echo $k_teiin?>名（締切<?php echo $limit2?>）</span><span class="contact-skill-txt"><font color="red"><b>会場参加は中止となりました</b></font></span>
                             </label>                     
                         </td>                                          
                         </td>
