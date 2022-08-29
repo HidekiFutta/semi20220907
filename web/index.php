@@ -90,7 +90,7 @@
                             </label>
                             <label class="contact-skill">
                                 <input type="radio" id="kaijyo" name="keitai" value="会場参加" disabled="disabled"<?php if( !empty($_POST['keitai']) && $_POST['keitai'] === "会場参加" ){ echo 'checked'; } ?>/>
-                                <span class="contact-skill-txt" id="edit_area">会場参加　会員限定 先着<?php echo $k_teiin?>名（締切<?php echo $limit2?>）</span><span class="contact-skill-txt"><font color="red"><b>会場参加は中止となりました</b></font></span>
+                                <span class="contact-skill-txt" id="edit_area"><s>会場参加　会員限定 先着12名（締切9月5日）</s></span><span class="contact-skill-txt"><font color="red"><b>会場参加は中止となりました</b></font></span>
                             </label>                     
                         </td>                                          
                         </td>
